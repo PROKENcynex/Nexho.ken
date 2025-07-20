@@ -1,0 +1,135 @@
+:root {
+      --text: #fff;
+      --accent: #a259ff;
+    }
+    body.light {
+      --text: #000000;
+      --accent: #6200ea;
+      background: #f9f9f9 url('https://www.transparenttextures.com/patterns/white-wall.png');
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', 'Segoe UI', sans-serif;
+      background: linear-gradient(270deg, #ff00cc, #3333ff, #00c6ff);
+      background-size: 600% 600%;
+      animation: gradientBackground 15s ease infinite;
+      color: var(--text);
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+    @keyframes gradientBackground {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    header, section, footer {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header {
+      background: radial-gradient(circle, #1a1a40 0%, #0a0a23 100%);
+      animation: fadeIn 2s ease-in-out;
+    }
+    h1 span, h2 span, h3, p, li, ul {
+      color: var(--text);
+    }
+    span.gold-text {
+      background: linear-gradient(to right,#a49105,#d4e51c,#cdd70c,#939504);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    span.gradient-text {
+      background: linear-gradient(45deg, #ff00cc, #3333ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    .icon-button {
+      position: fixed;
+      padding: 10px;
+      background: var(--accent);
+      border: none;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .toggle-mode {
+      top: 20px;
+      right: 70px;
+    }
+    .audio-btn {
+      bottom: 20px;
+      right: 20px;
+    }
+    .card-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      animation: fadeInUp 1.5s ease;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text);
+      font-family: 'Rubik', sans-serif;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(162, 89, 255, 0.5);
+    }
+    .tool-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .tool-logos img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+    .connect-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+      align-items: center;
+    }
+    .connect-buttons a {
+      padding: 10px 20px;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: transform 0.3s ease, background 0.3s ease;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .connect-buttons a:hover {
+      transform: scale(1.05);
+      background: #7e3ff2;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(-20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
